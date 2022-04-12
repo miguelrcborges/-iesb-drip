@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100;200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --background: #282a36;
+    --foreground: #f8f8f2;
+    --pink: #ff79c6;
+    --red: #ff5555;
+    --green: #50fa7b;
+}
+
+html {
+    margin: 0;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Anek Bangla', sans-serif;
+    font-size: 110%;
+}
+
+h1, h2, a, a:active {
+    color: var(--pink);
+}

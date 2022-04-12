@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IESB - Otimização da produção de APG</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/reatores.css">
+</head>
+<body>
+    <div class="flex-right gap">
+        <div class="flex-down">
+            <div class="flex-right">
+                <p>Volume: </p>
+                <input type="number" id="volume" value="1000">
+            </div>
+            <div class="flex-right">
+                <p>Caudal na entrada/saída: </p>
+                <input type="number" id="corrente" value="10">
+            </div>
+            <div class="flex-right">
+                <p>Concentração de glicose inicial: </p>
+                <input type="number" id="gliInicial" value="0.1">
+            </div>
+            <div class="flex-right">
+                <p>Concentração de glutamato inicial: </p>
+                <input type="number" id="gluInicial" value="0.1">
+            </div>
+        </div>
+        <div class="flex-down">
+            <p id="APG">Concentração de produto no reator: </p>
+            <p id="miu">Taxa de crescimento: </p>
+            <p id="gli">Concentração de glicose: </p>
+            <p id="glu">Concentração de glutamato: </p>
+            <p id="X">Concentração de biomassa no reator: </p>
+        </div>
+    </div>
+    <script src="../js/bem-agitado.js"></script>
+</body>
+</html>
