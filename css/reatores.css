@@ -28,3 +28,32 @@ body {
 .gap {
     gap: 10vw;
 }
+
+.small-gap {
+    gap: 10px;
+}
+
+input[type="number"] { 
+    text-align: center;
+    border: none;
+    background-color: var(--background);
+    color: var(--pink);
+    font-size: 0.9rem;
+    border: 1px solid var(--background);
+    width: 5rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    color: var(--pink);
+}
+
+
+input[type="number"]:focus {
+    outline: none !important;
+}
+
+input[type="number"]:focus, input[type="number"]:hover {
+    border-radius: 10px;
+    border: 1px solid var(--pink);
+}
