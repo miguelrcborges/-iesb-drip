@@ -15,8 +15,8 @@ function calcula() {
 
     let miu = caudal / volume;
     let X = XM * (1 - miu / MIU_MAX);
-    let gli = gliInicial + (1 / YX_S + YP_X/YP_S_GLI) * X 
-    let glu = gluInicial + YP_X / YP_S_GLU * X
+    let gli = gliInicial - (1 / YX_S + YP_X/YP_S_GLI) * X 
+    let glu = gluInicial - YP_X / YP_S_GLU * X
     let P = miu * YP_X * X * volume / caudal;
 
     document.querySelector("#APG").textContent = `Concentração de produto no reator: ${Math.round(P * 10000)/10000} g/L`
