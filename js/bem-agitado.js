@@ -18,7 +18,13 @@ function calcula() {
     let gli = gliInicial - (1 / YX_S + YP_X/YP_S_GLI) * X 
     let glu = gluInicial - YP_X / YP_S_GLU * X
     let P = miu * YP_X * X * volume / caudal;
+    let massP = P * caudal;
+    let massGli = caudal * gliInicial;
+    let massGlu = caudal * gluInicial;
 
+    document.querySelector("#massaProduto").textContent = `Massa de protudo na saída: ${Math.round(massP * 10000) / 10000} g/h`;
+    document.querySelector("#massaGli").textContent = `Massa de glicose na entrada: ${Math.round(massGli * 10000) / 10000} g/h`;
+    document.querySelector("#massaGlu").textContent = `Massa de glutamato na entrada: ${Math.round(massGlu * 10000) / 10000} g/h`;
     document.querySelector("#APG").textContent = `Concentração de produto no reator: ${Math.round(P * 10000)/10000} g/L`
     document.querySelector("#miu").innerHTML = `Taxa de crescimento: ${Math.round(miu * 10000)/10000} h<sup>-1</sup>`;
     document.querySelector("#gli").textContent = `Concentração de glicose: ${Math.round(gli * 10000)/10000} g/L`;
