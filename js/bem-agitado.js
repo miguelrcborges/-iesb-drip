@@ -38,11 +38,11 @@ function calcula() {
 
     let custos = gliPrice * massGli + gluPrice * massGlu;
     let ganhos = APGPrice * massP;
-    let profit = ganhos - custos;
+    let lucro = ganhos - custos;
 
     document.querySelector("#custo").textContent = `Custos: ${Math.round(custos * 100) / 100}€`;
     document.querySelector("#ganho").textContent = `Ganhos: ${Math.round(ganhos * 100) / 100}€`;
-    document.querySelector("#profit").textContent = `Profit: ${Math.round(profit * 100) / 100}€`;
+    document.querySelector("#lucro").textContent = `Lucro: ${Math.round(lucro * 100) / 100}€`;
 }
 
 document.querySelectorAll("input").forEach((input) => input.addEventListener('change', calcula));
