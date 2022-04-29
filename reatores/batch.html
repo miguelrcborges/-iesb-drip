@@ -17,37 +17,42 @@
                 <p>L</p>
             </div>
             <div class="flex-right small-gap">
-                <p>Caudal na entrada/saída: </p>
-                <input type="number" value="180">
-                <p>L/h</p>
-            </div>
-            <div class="flex-right small-gap">
-                <p>Concentração de glicose de saída: </p>
-                <input type="number" value="0">
+                <p>Concentração de glicose inicial: </p>
+                <input type="number" value="470">
                 <p>g/L</p>
             </div>
             <div class="flex-right small-gap">
-                <p>Concentração de glutamato de saída: </p>
-                <input type="number" value="0">
+                <p>Concentração de glutamato inicial: </p>
+                <input type="number" value="11">
                 <p>g/L</p>
             </div>
-            <h2>Lucro por hora</h2>
+            <div class="flex-right small-gap">
+                <p>Concentração de biomassa: </p>
+                <input type="number" value="1">
+                <p>g/L</p>
+            </div>
+            <div class="flex-right small-gap">
+                <p>Tempo: </p>
+                <input type="number" value="0">
+                <p>h</p>
+            </div>
+            <h2>Lucro</h2>
             <p id="custo">Custos: </p>
             <p id="ganho">Ganhos: </p>
             <p id="lucro">Lucro: </p>
             <p>Estamos a ser desconsiderado o preço do mercado sobre os preços do substrato e do produto, bem como custos de manuntenção do reator.</p>
         </div>
         <div class="flex-down">
-            <p id="massaProduto">Massa de protudo saída: </p>
-            <p id="massaGli">Massa de glicose na entrada: </p>
-            <p id="massaGlu">Massa de glutamato na saída: </p>
+            <p id="massaProduto">Massa de protudo no reator: </p>
+            <p id="massaGli">Massa de glicose no reator: </p>
+            <p id="massaGlu">Massa de glutamato no reator: </p>
             <p id="APG">Concentração de produto no reator: </p>
-            <p id="gliInicial">Concentração de glicose: </p>
-            <p id="gluInicial">Concentração de glutamato: </p>
+            <p id="gli">Concentração de glicose: </p>
+            <p id="glu">Concentração de glutamato: </p>
             <p id="X">Concentração de biomassa no reator: </p>
             <p id="miu">Taxa de crescimento: </p>
         </div>
     </div>
-    <script src="../js/bem-agitado.js"></script>
+    <script src="../js/batch.js"></script>
 </body>
 </html>
