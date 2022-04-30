@@ -21,7 +21,7 @@ function calcula() {
     let X = XM / (1 - (XInicial - XM)/(XInicial*e**(MIU_MAX*tempo)));
     let gli = (1 - XM / (XInicial * (e**(MIU_MAX * tempo) - 1) + XM)) * YGLI * (XInicial - XM) + gliInicial;
     let glu = (1 - XM / (XInicial * (e**(MIU_MAX * tempo) - 1) + XM)) * YGLU * (XInicial - XM) + gluInicial;
-    let P = - YP * (Math.log(Math.abs(1 + XInicial * (e**(MIU_MAX * tempo) - 1)/XM)) - MIU_MAX * tempo);
+    let P = YP * (XM - XInicial - (XM * (XM - XInicial)/(XM + XInicial * (e**(MIU_MAX * tempo) - 1)) ));
     let massProduto = P * volume;
     let massGli = gli * volume;
     let massGlu = glu * volume;
