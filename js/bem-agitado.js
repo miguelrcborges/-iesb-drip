@@ -13,10 +13,6 @@ function calcula() {
     const YP_S_GLU = 0.743;
     const YP_X = 3.09;
     
-    const gliPrice = 0.01708;
-    const gluPrice = 213;
-    const APGPrice = 2500;
-
 
     let miu = caudal / volume;
     let X = XM * (1 - miu / MIU_MAX);
@@ -36,13 +32,6 @@ function calcula() {
     document.querySelector("#gluInicial").textContent = `Concentração de glutamato à entrada: ${Math.round(gluInicial * 10000)/10000} g/L`;
     document.querySelector("#X").textContent = `Concentração de biomassa no reator: ${Math.round(X * 10000)/10000} g/L`;
 
-    let custos = gliPrice * massGli + gluPrice * massGlu;
-    let ganhos = APGPrice * massP;
-    let lucro = ganhos - custos;
-
-    document.querySelector("#custo").textContent = `Custos: ${Math.round(custos * 100) / 100}€`;
-    document.querySelector("#ganho").textContent = `Ganhos: ${Math.round(ganhos * 100) / 100}€`;
-    document.querySelector("#lucro").textContent = `Lucro: ${Math.round(lucro * 100) / 100}€`;
 }
 
 document.querySelectorAll("input").forEach((input) => input.addEventListener('change', calcula));

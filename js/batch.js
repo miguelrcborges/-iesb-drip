@@ -14,26 +14,16 @@ function calcula() {
     const YP = 3.09;
     const e = 2.718281828;
     
-    const gliPrice = 0.01708;
-    const gluPrice = 213;
-    const APGPrice = 2500;
 
     let X = XM / (1 - (XInicial - XM)/(XInicial*e**(MIU_MAX*tempo)));
-    let gli = (1 - XM / (XInicial * (e**(MIU_MAX * tempo) - 1) + XM)) * YGLI * (XInicial - XM) + gliInicial;
-    let glu = (1 - XM / (XInicial * (e**(MIU_MAX * tempo) - 1) + XM)) * YGLU * (XInicial - XM) + gluInicial;
-    let P = YP * (XM - XInicial - (XM * (XM - XInicial)/(XM + XInicial * (e**(MIU_MAX * tempo) - 1)) ));
+    let gli = (XM - XInicial) * YGLI * (XM /(XInicial * e**(MIU_MAX * tempo - 1) + XM) - 1) + gliInicial;
+    let glu = (XM - XInicial) * YGLU * (XM /(XInicial * e**(MIU_MAX * tempo - 1) + XM) - 1) + gluInicial;
+    let P = YP * (XM - XInicial) * (1 - XM/(XM + XInicial*(e**(MIU_MAX * tempo) - 1)));
     let massProduto = P * volume;
     let massGli = gli * volume;
     let massGlu = glu * volume;
     let miu = MIU_MAX * (1 - 1 / (1 - (XInicial - XM)/(XInicial * e**(MIU_MAX * tempo))));
     
-    let custos = gliPrice * massGli + gluPrice * massGlu;
-    let ganhos = APGPrice * massProduto;
-    let lucro = ganhos - custos;
-
-    document.querySelector("#custo").textContent = `Custos: ${Math.round(custos * 100) / 100}€`;
-    document.querySelector("#ganho").textContent = `Ganhos: ${Math.round(ganhos * 100) / 100}€`;
-    document.querySelector("#lucro").textContent = `Lucro: ${Math.round(lucro * 100) / 100}€`;
 
     document.querySelector("#massaProduto").textContent = `Massa de protudo no reator: ${Math.round(massProduto * 10000) / 10000} g`;
     document.querySelector("#massaGli").textContent = `Massa de glicose no reator: ${Math.round(massGli * 10000) / 10000} g`;
